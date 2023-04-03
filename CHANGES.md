@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.2.3
+
+- fix: const issue
+
 ## 0.2.2
 
 - fix: file reading bug
