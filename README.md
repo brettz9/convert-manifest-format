@@ -13,6 +13,13 @@ script left in `background.scripts`.
 See <https://stackoverflow.com/a/75203925/271577>
 for more background.
 
+This script will also attempt to comment out or uncomment, in
+Firefox or Chrome, respectively, an import of the webextensions
+browser polyfill. It is problematic in Firefox which still doesn't
+support service workers as background (except as `page` HTML files
+which Chrome doesn't support in Manifest v3), and it is required
+in Chrome if using WebExtensions polyglot code.
+
 ## Install
 
 ```shell
