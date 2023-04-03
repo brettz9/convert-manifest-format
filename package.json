@@ -1,6 +1,6 @@
 {
   "name": "convert-manifest-format",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Brett Zamir <brettz9@yahoo.com>",
   "contributors": [],
   "description": "Converts from one v3 Manifest format to another (Chrome or Firefox)",
