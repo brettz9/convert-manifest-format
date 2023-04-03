@@ -10,6 +10,9 @@ Note that if you are moving from Firefox, you should import all
 of your scripts besides the main one so that there is only one
 script left in `background.scripts`.
 
+See <https://stackoverflow.com/a/75203925/271577>
+for more background.
+
 ## Install
 
 ```shell
