@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.3.0
+
+- feat: add/remove `type: "module"`
+
 ## 0.2.3
 
 - fix: const issue

@@ -20,6 +20,9 @@ support service workers as background (except as `page` HTML files
 which Chrome doesn't support in Manifest v3), and it is required
 in Chrome if using WebExtensions polyglot code.
 
+And for Firefox, `type: "module"` will be removed, and for Chrome,
+`type: "module"` will be assumed.
+
 ## Install
 
 ```shell
