@@ -9,12 +9,12 @@ const file = await readFile(manifestPath);
 const manifest = JSON.parse(file);
 
 if (process.argv.includes('--chrome')) {
+  manifest.background.type = 'module';
   manifest.background.service_worker = manifest.background.scripts[0];
   let workerFile = await readFile(manifest.background.scripts[0], 'utf8');
   workerFile = workerFile.replace(/^\/\/ (import .*browser-polyfill.min.js['"];?)/um, '$1');
   await writeFile(manifest.background.scripts[0], workerFile);
   delete manifest.background.scripts;
-  manifest.background.type = 'module';
 } else if (process.argv.includes('--firefox')) {
   manifest.background.scripts = [manifest.background.service_worker];
   let workerFile = await readFile(manifest.background.service_worker, 'utf8');

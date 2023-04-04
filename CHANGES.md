@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.3.1
+
+- fix: reorder `type` before `service_worker`
+
 ## 0.3.0
 
 - feat: add/remove `type: "module"`
