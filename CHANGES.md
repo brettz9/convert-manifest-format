@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.4.0
+
+- fix: avoid handling `type` with Firefox adding support
+
 ## 0.3.1
 
 - fix: reorder `type` before `service_worker`
