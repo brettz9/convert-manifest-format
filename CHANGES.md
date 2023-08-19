@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.4.1
+
+- fix: bump `engines` to 14 as per current requirement
+
 ## 0.4.0
 
 - fix: avoid handling `type` with Firefox adding support
