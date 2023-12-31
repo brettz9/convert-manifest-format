@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.5.0
+
+- feat: Firefox prompt for `incognito`
+
 ## 0.4.1
 
 - fix: bump `engines` to 14 as per current requirement
