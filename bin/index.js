@@ -24,6 +24,14 @@ if (process.argv.includes('--chrome')) {
     delete manifest.background.service_worker;
   }
 
+  if (manifest.options_page) {
+    const optionsPage = manifest.options_page;
+    manifest.options_ui = {
+      page: optionsPage
+    };
+    delete manifest.options_page;
+  }
+
   if (manifest.incognito === 'split') {
     const {incognito} = await inquirer.prompt([
       {

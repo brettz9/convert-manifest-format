@@ -19,6 +19,9 @@ for more background.
 options will be given to keep, remove, or change the value (since
 "split" is [currently not supported](https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/incognito.html)).
 
+3. If the Firefox mode is chosen, any `options_page` value will be converted
+    to `"options_ui": {"page": "..."}`.
+
 ## Install
 
 ```shell

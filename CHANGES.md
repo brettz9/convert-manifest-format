@@ -1,7 +1,13 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.6.0
+
+- feat: convert `options_page` to `"options_ui": {"page": "..."}` in
+    Firefox mode
+
 ## 0.5.0
 
+- fix: No longer errs if `background` fields missing
 - feat: Firefox prompt for `incognito`
 
 ## 0.4.1
