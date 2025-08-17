@@ -41,3 +41,12 @@ To convert to Firefox:
 ```shell
 convert-manifest-format --firefox
 ```
+
+You can control the output spacing as follows:
+
+```shell
+convert-manifest-format --firefox --spacing <FORMAT>
+```
+
+...where `<FORMAT>` can be "tab" or the desired number of
+spaces. The default is 2 spaces.

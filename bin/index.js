@@ -72,7 +72,14 @@ if (process.argv.includes('--chrome')) {
   }
 }
 
-const manifestString = JSON.stringify(manifest, null, 2) + '\n';
+const spacingIdx = process.argv.indexOf('--spacing');
+const spacing = spacingIdx === -1
+  ? 2
+  : process.argv[spacingIdx + 1] === 'tab'
+    ? '\t'
+    : Number.parseInt(process.argv[spacingIdx + 1]);
+
+const manifestString = JSON.stringify(manifest, null, spacing) + '\n';
 
 await writeFile(manifestPath, manifestString);
 

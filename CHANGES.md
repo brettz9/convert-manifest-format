@@ -1,5 +1,10 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.7.0
+
+- feat: allow for `--spacing` option to control JSON output (as
+    "tab" or the desired number of spaces)
+
 ## 0.6.0
 
 - feat: convert `options_page` to `"options_ui": {"page": "..."}` in
