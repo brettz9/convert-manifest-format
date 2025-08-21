@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.8.0
+
+- feat: adds CLI help, version, and update notifier; fixes #6
+
 ## 0.7.0
 
 - feat: allow for `--spacing` option to control JSON output (as

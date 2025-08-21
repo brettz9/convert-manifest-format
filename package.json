@@ -1,6 +1,6 @@
 {
   "name": "convert-manifest-format",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Brett Zamir <brettz9@yahoo.com>",
   "contributors": [],
   "description": "Converts from one v3 Manifest format to another (Chrome or Firefox)",
@@ -25,6 +25,8 @@
     "firefox": "./bin/index.js --firefox",
     "tab": "./bin/index.js --firefox --spacing tab",
     "space": "./bin/index.js --firefox --spacing 4",
+    "version": "./bin/index.js --version",
+    "help": "./bin/index.js --help",
     "lint": "eslint ."
   },
   "repository": {
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^8.39.0",
+    "command-line-basics": "^2.0.1",
     "eslint": "^8.39.0",
     "globals": "^13.20.0"
   },

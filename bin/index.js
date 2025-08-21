@@ -2,6 +2,16 @@
 
 import {readFile, writeFile} from 'fs/promises';
 import inquirer from 'inquirer';
+import {cliBasics} from 'command-line-basics';
+
+// Point to a file with a `definitions` and `sections` export (or
+//   JSON properties)
+const optionDefinitions = await cliBasics(
+  './bin/optionDefinitions.js'
+);
+if (!optionDefinitions) { // cliBasics handled
+  process.exit(0);
+}
 
 const manifestPath = './manifest.json';
 
@@ -9,14 +19,14 @@ const file = await readFile(manifestPath);
 
 const manifest = JSON.parse(file);
 
-if (process.argv.includes('--chrome')) {
+if (optionDefinitions.chrome) {
   if (manifest.background?.scripts?.[0]) {
     manifest.background.service_worker = manifest.background.scripts[0];
     const workerFile = await readFile(manifest.background.scripts[0], 'utf8');
     await writeFile(manifest.background.scripts[0], workerFile);
     delete manifest.background.scripts;
   }
-} else if (process.argv.includes('--firefox')) {
+} else if (optionDefinitions.firefox) {
   if (manifest.background?.service_worker) {
     manifest.background.scripts = [manifest.background.service_worker];
     const workerFile = await readFile(manifest.background.service_worker, 'utf8');
@@ -72,12 +82,11 @@ if (process.argv.includes('--chrome')) {
   }
 }
 
-const spacingIdx = process.argv.indexOf('--spacing');
-const spacing = spacingIdx === -1
-  ? 2
-  : process.argv[spacingIdx + 1] === 'tab'
+const spacing = optionDefinitions.spacing
+  ? optionDefinitions.spacing === 'tab'
     ? '\t'
-    : Number.parseInt(process.argv[spacingIdx + 1]);
+    : Number.parseInt(optionDefinitions.spacing)
+  : 2;
 
 const manifestString = JSON.stringify(manifest, null, spacing) + '\n';
 
