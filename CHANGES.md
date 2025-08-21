@@ -1,5 +1,10 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.9.0
+
+- fix: supply `packageJsonPath` to `cliBasics`
+- chore: update deps. and devDeps.
+
 ## 0.8.2
 
 - fix: dirname issue
