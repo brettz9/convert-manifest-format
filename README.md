@@ -1,5 +1,7 @@
 # convert-manifest-format
 
+[![npm](https://img.shields.io/npm/v/convert-manifest-format.svg)](https://www.npmjs.com/package/convert-manifest-format)
+
 Converts between Firefox and Chrome's flavor of WebExtensions
 Manifest v3.
 
