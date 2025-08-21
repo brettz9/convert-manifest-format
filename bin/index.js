@@ -7,7 +7,7 @@ import {cliBasics} from 'command-line-basics';
 // Point to a file with a `definitions` and `sections` export (or
 //   JSON properties)
 const optionDefinitions = await cliBasics(
-  './bin/optionDefinitions.js'
+  import.meta.dirname + '/optionDefinitions.js'
 );
 if (!optionDefinitions) { // cliBasics handled
   process.exit(0);

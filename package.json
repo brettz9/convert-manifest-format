@@ -1,6 +1,6 @@
 {
   "name": "convert-manifest-format",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": "Brett Zamir <brettz9@yahoo.com>",
   "contributors": [],
   "description": "Converts from one v3 Manifest format to another (Chrome or Firefox)",
@@ -10,15 +10,9 @@
     "manifest",
     "webextensions"
   ],
-  "main": "src/index.js",
   "browserslist": [
     "cover 100%"
   ],
-  "exports": {
-    "import": "./dist/index-esm.js",
-    "require": "./dist/index-cjs.cjs",
-    "default": "./dist/index-esm-browser.js"
-  },
   "bin": "bin/index.js",
   "scripts": {
     "chrome": "./bin/index.js --chrome",
@@ -38,7 +32,7 @@
   },
   "homepage": "https://github.com/brettz9/convert-manifest-format",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.11.0"
   },
   "devDependencies": {
     "@eslint/js": "^8.39.0",

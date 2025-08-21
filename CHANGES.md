@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.8.2
+
+- fix: dirname issue
+
 ## 0.8.1
 
 - fix: ensure `command-line-basics` is published
