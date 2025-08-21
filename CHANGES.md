@@ -1,5 +1,9 @@
 # CHANGES for `convert-manifest-format`
 
+## 0.8.1
+
+- fix: ensure `command-line-basics` is published
+
 ## 0.8.0
 
 - feat: adds CLI help, version, and update notifier; fixes #6
